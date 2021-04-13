@@ -1,7 +1,7 @@
 
 
 
-Common coding pitfals:
+Common coding pitfalls:
     1.  Prefix calculator properties with 'calculator.'  Ex: lastResult is incorrect, calculator.lastResult is correct.
 
 
@@ -34,7 +34,7 @@ Bugs list:
 
         Suspected problem:
           When pressing AC, the calculator tries to first 
-          perfirm the last operation.  The correct behaviour
+          perform the last operation.  The correct behavior
           would be to simply clear the inputs without performing
           any calculation. 
 
@@ -48,7 +48,7 @@ Bugs list:
 
         Suspected problem:
           When pressing AC, the calculator tries to first 
-          perfirm the last operation.  The correct behaviour
+          perform the last operation.  The correct behavior
           would be to simply clear the inputs without performing
           any calculation. 
 
@@ -75,12 +75,12 @@ Update 1.1.0 feature plan:
    -Info spot (version, creator, etc)                                   (done)
    -Save user preferences when calculator is closed                     (done)
    -More understandable error messages.  Perhaps under categories       (done)
-   -Updated app icon (probably will just outline the current icon)      (canceled, due to outlined icon causing grainyness around edges when in title bar)
+   -Updated app icon (probably will just outline the current icon)      (canceled, due to outlined icon causing graininess around edges when in title bar)
    -Update EULA (could use Microsoft EULA as template)                  (done)
    -fix known bugs                                                      (done)
 
    Debating features:
-        -Should a release notes spot be added?  I dont think so, because updates are infrequent
+        -Should a release notes spot be added?  I don't think so, because updates are infrequent
         -Custom title bar (may be a waste of time)
         -Vector file import/export (this sounds really dumb)
         -Send feedback section (how would this be implemented?)
