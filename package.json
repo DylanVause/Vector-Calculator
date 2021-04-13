@@ -1,0 +1,35 @@
+{
+  "name": "vector-calculator",
+  "version": "1.0.0",
+  "description": "A calculator focused on working with vectors.",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.dylanvause.vector-calculator",
+    "productName": "Vector Calculator",
+    "icon": "./build/icon.png",
+    "target": "NSIS",
+    "directories": {
+      "output": "build"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "license": "EULA.txt"
+    }
+  },
+  "keywords": [],
+  "author": "Dylan Vause",
+  "license": "",
+  "devDependencies": {
+    "electron": "^11.2.1",
+    "electron-builder": "^22.9.1"
+  },
+  "dependencies": {
+    "electron-reload": "^1.5.0",
+    "mathjs": "^9.2.0"
+  }
+}
