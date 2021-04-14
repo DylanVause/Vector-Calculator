@@ -10,7 +10,7 @@
   "build": {
     "appId": "com.dylanvause.vector-calculator",
     "productName": "Vector Calculator",
-    "icon": "./resources/icon.png",
+    "icon": "./resources/icons/icon.png",
     "target": "NSIS",
     "directories": {
       "buildResources": "resources",
