@@ -19,7 +19,7 @@
     "nsis": {
       "oneClick": false,
       "allowToChangeInstallationDirectory": true,
-      "license": "EULA.txt"
+      "license": "LICENSE"
     }
   },
   "keywords": [],
