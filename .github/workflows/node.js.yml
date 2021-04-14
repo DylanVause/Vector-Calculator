@@ -25,6 +25,7 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
+    - run: ls
     - run: npm install
     - run: npm run dist --if-present
    # - run: npm test
