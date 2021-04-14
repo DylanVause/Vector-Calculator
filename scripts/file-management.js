@@ -70,7 +70,7 @@ function writeConfig(configObject) {
 
 function readEULA(callback) {
     try {
-        fs.readFile('./EULA.txt', 'utf8', (err, data) => {
+        fs.readFile('./LICENSE', 'utf8', (err, data) => {
             callback(data)
         })
     } catch (error) {
