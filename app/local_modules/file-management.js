@@ -4,18 +4,18 @@
 
 
 const fs = require('fs');
+const saveFP = "./config.json"
+const license = "./LICENSE"
 
 module.exports.readConfig = readConfig;
 module.exports.writeConfig = writeConfig;
 module.exports.readEULA = readEULA;
 
-const saveFilePath = './config.json';
-
 function readConfig(callback) {
     try {
 
-        if (fs.existsSync(saveFilePath)) {
-            fs.readFile(saveFilePath, null, (err, data) => {
+        if (fs.existsSync(saveFP)) {
+            fs.readFile(saveFP, null, (err, data) => {
                 try {
                     let config = JSON.parse(data);
                     if (config.decimalPoints != null && config.keepOnTop != null) {
@@ -52,7 +52,7 @@ function readConfig(callback) {
         }
 
     } catch (err) {
-        alert('File Management Error (1): ' + err)
+        alert(err)
     }
 
 }
@@ -60,22 +60,22 @@ function readConfig(callback) {
 function writeConfig(configObject) {
     try {
 
-        fs.writeFile(saveFilePath, JSON.stringify(configObject), (err) => {
+        fs.writeFile(saveFP, JSON.stringify(configObject), (err) => {
             if (err) {
-                alert('File Management Error (2): ' + err)
+                alert(err)
             }
         })
     } catch (err) {
-        alert('File Management Error (3): ' + err)
+        alert(err)
     }
 }
 
 function readEULA(callback) {
     try {
-        fs.readFile('./EULA.txt', 'utf8', (err, data) => {
+        fs.readFile(license, 'utf8', (err, data) => {
             callback(data)
         })
     } catch (error) {
-        alert('File Management Error (4): ' + err)
+        alert(err)
     }
 }

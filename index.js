@@ -23,13 +23,13 @@ function createWindow () {
     height: 600,
     minWidth: 300,
     minHeight: 300,
-    icon: __dirname + './resources/icons/icon.png',
+    icon: __dirname + '/app/resources/icons/icon.png',
     webPreferences: {
       nodeIntegration: true
     }
   })
 
-  win.loadFile('index.html')
+  win.loadFile('./app/index.html')
 
   win.removeMenu();
 }

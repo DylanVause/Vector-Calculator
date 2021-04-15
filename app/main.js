@@ -10,7 +10,7 @@ const math = require('./local_modules/vector-math.js');
 const stringjs = require('./local_modules/string.js')
 
 // Load in config
-const FileManager = require('./scripts/file-management.js')
+const FileManager = require('./local_modules/file-management.js')
 const { ipcRenderer } = require('electron')
 let showAdvancedErrors = false;
 // Must be between 0 and 8

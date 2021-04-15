@@ -1,6 +1,6 @@
 {
   "name": "vector-calculator",
-  "version": "1.1.0",
+  "version": "1.1.7",
   "description": "A calculator focused on working with vectors.",
   "main": "index.js",
   "scripts": {
@@ -10,18 +10,19 @@
   "build": {
     "appId": "com.dylanvause.vector-calculator",
     "productName": "Vector Calculator",
-    "icon": "./build/icon.png",
+    "icon": "/app/resources/icons/icon.png",
     "target": "NSIS",
     "directories": {
+      "buildResources": "./",
       "output": "build"
     },
     "extraFiles": [
-      "EULA.txt"
+      "LICENSE"
     ],
     "nsis": {
       "oneClick": false,
       "allowToChangeInstallationDirectory": true,
-      "license": "EULA.txt"
+      "license": "LICENSE"
     }
   },
   "keywords": [],
