@@ -1,0 +1,90 @@
+<!--
+///////////////////////////////////////
+// Copyright © 2021 Dylan Vause.  All rights reserved.
+//
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="./visual/index.css">
+    <link rel="stylesheet" href="./menu.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+</head>
+
+<body>
+    <div id="popup" class="popup-background">
+        <div class="window">
+            <img src="./resources/icons/icon.png" class="icon">
+            <p id="header-text" class="header-text">Vector Calculator</p>
+            <div style="border-top: 1px solid grey; width: 60vmin;"></div>
+            <!--This is the vertical line right under the header-->
+            <div class="vertical-box">
+                <table style="width: fit-content; align-self: center; margin-top: 1vh;">
+                    <tr>
+                        <td>
+                            <div class="horizontal-box" style="width: auto; justify-content: center;">
+                                <p>Result decimal length</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="horizontal-box" style="width: auto; justify-content: center;">
+                                <button id="subtract-decimal-point" class="input-button"
+                                    style="border-top-left-radius: 1vmin; border-bottom-left-radius: 1vmin;"><strong>-</strong></button>
+                                <input class="text-field" id="decimal-points-input">
+                                <button id="add-decimal-point" class="input-button"
+                                    style="border-top-right-radius: 1vmin; border-bottom-right-radius: 1vmin;"><strong>+</strong></button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="horizontal-box" style="width: auto; justify-content: center;">
+                                <p>Keep window on top</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="horizontal-box" style="width: auto; justify-content: center;">
+                                <input type="checkbox" class="checkbox" id="keep-on-top-input">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="horizontal-box" style="width: auto; justify-content: center; text-overflow:clip;">
+                                <p>Advanced error messages</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="horizontal-box" style="width: auto; justify-content: center;">
+                                <input type="checkbox" class="checkbox" id="advanced-error-input">
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+                <div class="vertical-box" style="height: auto; margin-top: auto;">
+                    <p class="copyright">Vector Calculator 1.1.0</p>
+                    <p class="copyright">Copyright © 2021 Dylan Vause</p>
+                    <button class="eula-button" id="eula-button"><u>Software Licence Terms</u></button>
+                </div>
+                <button id="menu-close-button" style="align-self: center; margin: 3vmin;">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="eula-popup" style="position: absolute; width: 100%; height: 100%; background-color: white; z-index: 2; overflow: hidden;" hidden>
+        <div style="height: 100%; overflow: auto;">
+            <p id="eula-text" style="margin: 10% 10% 0% 10%"></p>
+            <button id="close-eula" style="margin-left: 10%; margin-top: 20px; margin-bottom: 10%; ">Close</button>
+        </div>
+    </div>
+
+    <script src="./local_modules/menu.js"></script>
+
+
+
+</body>
+
+</html>

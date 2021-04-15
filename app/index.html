@@ -1,0 +1,76 @@
+<!--
+///////////////////////////////////////
+// Copyright © 2021 Dylan Vause.  All rights reserved.
+//
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="visual/index.css">
+    <meta charset="UTF-8">
+    <title>Vector Calculator</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+</head>
+
+<body>
+    <iframe id="menu" src="menu.html" style="position: absolute; border: hidden; z-index: 1; width: 100%; height: 100%;" hidden></iframe>
+    <div class="output-window">
+    </div>
+    <button type="button" class="deg-rad-grad">DEG</button>
+
+    <!--Menu button-->
+    <button id="menu-button" type="button" class="menu"><img src="./resources/icons/navigation.png" style="width: 30px;"></button>
+
+    <div class="input-window">
+        <div id="current-operator" style="font-size: 18vmin; margin-left: 20px; margin-right: 20px;"></div>
+        <div id='input-field-container' class="input-field-container">
+            <input id="grey-input-field" class="grey-input-field" placeholder="...">
+        </div>
+    </div>
+    <div class="buttons-container">
+        <button type="button" class="operator" value="multiply-scalar">
+            <span class="tooltip">Scalar Multiple</span>
+            a<b value="multiply-scalar">v</b></button>
+        <button type="button" class="operator" value="add">
+            <span class="tooltip">Add</span>
+            +</button>
+        <button type="button" class="all-clear" value="all-clear">
+            <span class="tooltip">All Clear</span>
+            AC</button>
+
+        <button type="button" class="operator" value="dot-product">
+            <span class="tooltip">Dot Product</span>
+            <b value="dot-product">u ⋅ v</b>
+        </button>
+        <button type="button" class="operator" value="subtract">
+            <span class="tooltip">Subtract</span>
+            -</button>
+        <button type="button" class="operator" value="cross-product">
+            <span class="tooltip">Cross Product</span>
+            <b value="cross-product">u</b> × <b>v</b></button>
+        <button type="button" class="operator" value="magnitude">
+            <span class="tooltip">Magnitude</span>
+            |<b value="magnitude">v</b>|</button>
+
+        <button type="button" class="equal-sign" value="equal-sign">
+            <span class="tooltip">Equals</span>
+            =</button>
+    </div>
+
+    <div id="popup" class="popup-background" hidden>
+        <div class="popup-box">
+            <p id="popup-header" class="popup-header">Popup Header</p>
+            <div style="border-top: 1px solid grey; width: 60vmin;"></div>
+            <p id="popup-msg" style="font-size: 5vmin; padding-left: 20px; padding-right: 20px; text-align: center;">Popup message</p>
+            <button class="popup-close">Close</button>
+        </div>
+    </div>
+
+
+    <script id="main-script" src="main.js"></script>
+</body>
+
+
+</html>
