@@ -1,6 +1,6 @@
 {
   "name": "vector-calculator",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "description": "A calculator focused on working with vectors.",
   "main": "index.js",
   "scripts": {
