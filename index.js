@@ -25,7 +25,8 @@ function createWindow () {
     minHeight: 300,
     icon: __dirname + '/app/resources/icons/icon.png',
     webPreferences: {
-      nodeIntegration: true
+      nodeIntegration: true,
+      contextIsolation: false
     }
   })
 
