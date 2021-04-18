@@ -12,6 +12,7 @@ const stringjs = require('./local_modules/string.js')
 // Load in config
 const FileManager = require('./local_modules/file-management.js')
 const { ipcRenderer } = require('electron')
+window.ipcRenderer = ipcRenderer;
 let showAdvancedErrors = false;
 // Must be between 0 and 8
 let outputFixedNumber = 4;
@@ -186,6 +187,11 @@ window.addEventListener('message', function(event) {
                     eulaText: text
                 })
             })
+            break;
+        case ('require-electron'):
+            event.returnValue = 'hello';
+            break;
+
     }
 })
 

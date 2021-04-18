@@ -43,6 +43,10 @@ ipcMain.on('set-keep-on-top', (event, bKeepOnTop) => {
   event.returnValue = bKeepOnTop;
 })
 
+ipcMain.on('get-version', (event) => {
+  event.returnValue = app.getVersion();
+})
+
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {

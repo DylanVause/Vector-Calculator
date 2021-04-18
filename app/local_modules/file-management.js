@@ -6,6 +6,8 @@
 const fs = require('fs');
 const saveFP = "./config.json"
 const license = "./LICENSE"
+
+// This is the default configuration to use if there is none available, or if the current one needs repair
 const defaultConfig = {
     decimalPoints: 4,
     keepOnTop: false,
@@ -13,6 +15,7 @@ const defaultConfig = {
     showAdvancedErrors: false
 }
 
+// Functions marked for use by external scripts
 module.exports.readConfig = readConfig;
 module.exports.writeConfig = writeConfig;
 module.exports.readEULA = readEULA;
@@ -24,7 +27,7 @@ function readConfig(callback) {
             fs.readFile(saveFP, null, (err, data) => {
                 try {
                     let config = JSON.parse(data);
-                    if (isConfigValid()) {
+                    if (isConfigValid(config)) {
                         callback(config)
                     }
                     else 
