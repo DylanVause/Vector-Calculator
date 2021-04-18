@@ -20,6 +20,7 @@ module.exports.readConfig = readConfig;
 module.exports.writeConfig = writeConfig;
 module.exports.readEULA = readEULA;
 
+// Read the config file and pass the config object as an argument to a callback function
 function readConfig(callback) {
     try {
 
@@ -51,6 +52,7 @@ function readConfig(callback) {
 
 }
 
+// Write a config object to file
 function writeConfig(configObject) {
     try {
 
@@ -64,6 +66,7 @@ function writeConfig(configObject) {
     }
 }
 
+//  Read the end user license agreement from file and pass the text to a callback function.  
 function readEULA(callback) {
     try {
         fs.readFile(license, 'utf8', (err, data) => {
@@ -74,6 +77,8 @@ function readEULA(callback) {
     }
 }
 
+/** Repairs the config file if there are any missing config properties (this can happen if an update adds to the config properties).
+*/
 function repairConfig()
 {
     if (fs.existsSync(saveFP))
@@ -81,6 +86,8 @@ function repairConfig()
         fs.readFile(saveFP, null, (err, data) => {
             try {
                 // Repair any missing properties in the config file
+                // We repair missing properties one-by-one instead of completely rewriting in order to preserve most user settings.
+                // In the future, we should make this match the default config properties automatically for better code maintenance.
                 let config = JSON.parse(data);
                 if (config.decimalPoints == null)
                 {
