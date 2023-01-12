@@ -30,7 +30,7 @@
   "author": "Dylan Vause",
   "license": "",
   "devDependencies": {
-    "electron": "^12.0.4",
+    "electron": "^22.0.1",
     "electron-builder": "^22.10.5"
   },
   "dependencies": {
